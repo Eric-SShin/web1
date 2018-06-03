@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+      <script src="colors.js"></script>
+  <body>
+    <input id="night_day" type="button" value="night" onclick="ndh(this)">
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script type="text/javascript">
+    var coworkers = {
+      "Programmer":"STS",
+      "Designer":"NTT",
+
+    };
+
+    document.write("프로그래머 : "+coworkers.Programmer+"<br>");
+    document.write("디자이너 : "+coworkers.Designer+"<br>");
+    coworkers.bookeeper = "GGG";
+    document.write("회계사 : "+coworkers.bookeeper+"<br>");
+
+    </script>
+    <h2>Iterate</h2>
+    <script type="text/javascript">
+    for(var key in coworkers) {
+   document.write(key+'<br>');
+    }
+    for(var key in coworkers) {
+   document.write(key+' : '+coworkers[key]+'<br>');
+    }
+    </script>
+    <h2>Property Method</h2>
+    <script>
+      coworkers.showAll = function(){
+        for(var key in this) {
+       document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+        coworkers.showAll();
+    </script>
+
+  </body>
+</html>
